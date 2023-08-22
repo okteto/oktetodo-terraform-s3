@@ -1,0 +1,6 @@
+.git
+.github
+!.terraform.lock.hcl
+.terraform
+server/node_modules
+client/node_modules
