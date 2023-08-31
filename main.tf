@@ -33,7 +33,7 @@ provider "aws" {
   region = var.region
 }
 
-resource "aws_s3_bucket" "checks_bucket" {
+resource "aws_s3_bucket" "todos_bucket" {
   bucket        = var.bucket_name
   force_destroy = true
 }
