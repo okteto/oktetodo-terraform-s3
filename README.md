@@ -11,4 +11,6 @@ AWS_REGION
 AWS_SECRET_ACCESS_KEY
 ```
 
+Note: Make sure this user has the permissions to create S3 buckets.
+
 2. Deploy the application from the UI using the Git URL (https://github.com/okteto/oktetodo-terraform-s3) option or clone the repo and run `okteto deploy` or `okteto up`.
