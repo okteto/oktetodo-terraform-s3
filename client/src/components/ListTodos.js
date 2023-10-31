@@ -4,6 +4,7 @@ import EditTodo from "./EditTodo";
 
 const ListTodos = () => {
   const [todos, setTodos] = useState([]);
+  const [showNotification, setShowNotification] = useState(false);
 
   const deleteTodo = async (id) => {
     try {
@@ -35,6 +36,11 @@ const ListTodos = () => {
       });
       const data = await response.json();
       console.log(data.message, data.s3Url);
+      setShowNotification(true);
+
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 10000);
     } catch (error) {
       console.error("Error saving todos to S3:", error);
     }
@@ -89,6 +95,12 @@ const ListTodos = () => {
               Save
             </button>
           </footer>
+          <div
+            className={`notification ${showNotification && "notification-active"
+              }`}
+          >
+            Todos Backed Up
+          </div>
         </>
       )}
     </Fragment>

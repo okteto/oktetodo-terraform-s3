@@ -61,7 +61,7 @@ h2.title {
 
 .submit-button {
   padding: 1em;
-  box-shadow: 0 1px 0 0 #0e203d,0 2px 0 0 #0e203d,0 3px 0 0 #0e203d;
+  box-shadow: 0 1px 0 0 #0e203d, 0 2px 0 0 #0e203d, 0 3px 0 0 #0e203d;
   border-radius: 1em;
   font-weight: bold;
   color: #0e203d;
@@ -85,11 +85,12 @@ h2.title {
 }
 
 .submit-button-small.delete {
-  padding: 0.2em; /* Not sure why the delete icon is smaller. Make it visually the same size */
+  padding: 0.2em;
+  /* Not sure why the delete icon is smaller. Make it visually the same size */
 }
 
 .submit-button:hover {
-  box-shadow: 0 0 0 0 #0e203d,0 0 0 0 #0e203d,0 0 0 0 #0e203d;
+  box-shadow: 0 0 0 0 #0e203d, 0 0 0 0 #0e203d, 0 0 0 0 #0e203d;
   top: 3px;
 }
 
@@ -118,7 +119,7 @@ h2.title {
   font-size: 1.1em;
 }
 
-.app-todos li + li {
+.app-todos li+li {
   margin-top: 1em;
   border-top: 1px #d3d3d3 solid;
   padding-top: 1em;
@@ -173,7 +174,7 @@ h2.title {
   border-radius: 10px;
   border: 2px #0e203d solid;
   max-width: 700px;
-  box-shadow: 1px 1px 0 0 #0e203d,2px 2px 0 0 #0e203d,3px 3px 0 0 #0e203d,4px 4px 0 0 #0e203d,5px 5px 0 0 #0e203d,6px 6px 0 0 #0e203d;
+  box-shadow: 1px 1px 0 0 #0e203d, 2px 2px 0 0 #0e203d, 3px 3px 0 0 #0e203d, 4px 4px 0 0 #0e203d, 5px 5px 0 0 #0e203d, 6px 6px 0 0 #0e203d;
   width: 90%;
   padding: 2em;
   position: relative;
@@ -190,4 +191,21 @@ h2.modal-title {
   border: 0;
   appearance: none;
   background: transparent;
+}
+
+.notification {
+  position: fixed;
+  top: -4em;
+  right: 1em;
+  padding: 1em;
+  background: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border: 2px #0e203d solid;
+  border-radius: 10px;
+  transition: top 600ms cubic-bezier(0.29, 0.84, 0.68, 1.17);
+}
+
+.notification-active {
+  top: 1em;
 }
