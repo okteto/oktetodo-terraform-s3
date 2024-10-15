@@ -14,7 +14,7 @@ deploy:
       export KUBE_CONFIG_PATH="$KUBECONFIG"
       export KUBE_NAMESPACE=$OKTETO_NAMESPACE
       terraform init -input=false
-      terraform apply -input=false -var "bucket_name=$resourceName" -var "region=$AWS_REGION" -auto-approve
+      terraform apply -input=false -var "bucket_name=$resourceName" -auto-approve
       
       s3Dashboard="https://s3.console.aws.amazon.com/s3/buckets/${resourceName}"
 
